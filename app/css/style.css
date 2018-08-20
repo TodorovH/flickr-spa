@@ -1,0 +1,132 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url("../img/main-background.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-attachment: fixed;
+}
+
+#header-container {
+	background: black;
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	color: white;
+	padding-top: 40px;
+}
+
+#header {
+	align-items: center;
+	display: flex;
+	font-size: 100px;
+	height: 100px;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	perspective: 100px;
+}
+
+#pages-container {
+	width: 100%;
+	min-height: 700px;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 60px;
+}
+
+.btn {
+	background-color: #ab0000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn:hover {
+	background-color: #ff2323;
+}
+
+#search-container {
+	display: inline-flex;
+	width: 60%;
+	text-align: center;
+}
+
+#search-btn {
+	width: 18%;
+    height: 50px;
+    margin: 0 auto;
+}
+
+#search-img {
+	background-image: url("../img/search.png");
+	background-color: #fff;
+	margin: 0;
+    padding: 0;
+    width: 50px;
+	height: 43px;
+	margin-top: 1px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+	border-radius: 0;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	cursor: pointer;
+}
+
+input {
+	width: 100%;
+	height: 30px;
+	padding: 5px 10px;
+	margin-bottom: 30px !important;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	outline: none;
+	font-size: 20px;
+}
+
+.animate-pop-in {
+  animation: pop-in .6s ease-out forwards;
+}
+
+#result-container {
+	width: 100%;
+	text-align: center;
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.picture {
+	width: 22%;
+	margin: 12px;
+	padding: 10px;
+	float:left;
+	background-color: orange;
+}
+
+.picture img {
+	width: auto;
+	height: 180px;
+    object-fit: contain;
+    text-align: center;
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}

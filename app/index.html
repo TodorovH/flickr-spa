@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="FlickrPhotoStream">
+	<head>
+		<meta charset="UTF-8">
+		<title>Flickr Photo Stream</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div id="header-container">
+			<div id="header" class="animate-pop-in">
+				Flickr Photo Stream
+			</div>
+		</div>
+		<div id="pages-container">
+			<div ng-view ng-class='viewsContainer'>
+		
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			window.onbeforeunload = function () {
+			  	window.scrollTo(0, 0);
+			}
+		</script>
+		
+		<script src="lib/angular.min.js"></script>
+		<script src="lib/angular-route.js"></script>
+		<script src="app.js"></script>
+		<script src="services/SearchService.js"></script>
+		<script src="services/DescriptionService.js"></script>
+		<script src="directives/PostRepeatDirective.js"></script>
+		<script src="controllers/HomeController.js"></script>
+		<script src="controllers/SearchController.js"></script>
+
+	</body>
+</html>

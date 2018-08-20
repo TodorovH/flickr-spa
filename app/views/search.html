@@ -1,0 +1,17 @@
+<div id="search-container">
+	<input type="text" id="tags" name="tags" placeholder="Enter search tags...">
+	<div id="search-img" class="" ng-click="search()"></div>
+</div>
+
+<div id="result-container">
+	<div class="picture" ng-repeat="picInfo in picsData.photo" my-post-repeat-directive>
+		<img ng-src="https://farm{{picInfo.farm}}.staticflickr.com/{{picInfo.server}}/{{picInfo.id}}_{{picInfo.secret}}_z.jpg" alt={{picInfo.title}}><br><br>
+		<a href="https://www.flickr.com/photos/{{picInfo.owner}}/{{picInfo.id}}/">{{picInfo.title}}</a><br>
+		by<br>
+		<a href="https://www.flickr.com/people/{{picInfo.owner}}/">{{picInfo.owner}}</a><br>
+		<br><br>
+		Description: <p class="desc-container" id="{{picInfo.id}}"></p>
+		<br><br>
+		Tags: {{tags}}...
+	</div>
+</div>
